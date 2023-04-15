@@ -1,5 +1,46 @@
 @import "./variables.scss";
 
+@font-face {
+  font-family: "Aire Exterior";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/aireExteriorRegular.woff") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/roboto-medium.woff2") format("woff2");
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/roboto-light.woff2") format("woff2");
+  font-display: swap
+}
+
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -55,3 +96,27 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+button {
+  cursor: pointer;
+}
+
+.swiper-scrollbar-drag {
+  background-color: $color-light-blue;
+  width: 2px;
+}
+
+.intro__slider__scrollbar {
+  position: absolute;
+  width: 2px;
+  height: 520px;
+  background-color: #ffffff;
+  top: 140px;
+  right: 50px;
+}
+
+.intro__slider__scrollbar .swiper-scrollbar-drag {
+  background-color: $color-light-blue;
+  width: 2px;
+}
+

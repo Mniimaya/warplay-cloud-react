@@ -1,0 +1,43 @@
+@import "../../../global-style/variables.scss";
+@import "../../../global-style/mixins.scss";
+
+ 
+.intro__slider {
+    display: none;
+    @include viewport--lg {
+      width: 100%;
+      max-width: 1440px;
+      height: 777px;
+      overflow: hidden;
+      position: absolute;
+      z-index: -2;
+      top: 0;
+      display: block;
+    }
+  }
+  
+  .intro__sliderWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .intro__slide {
+    flex-shrink: 0;
+  }
+  
+  .intro__slide img {
+    border-radius: 0 0 15px 15px;
+  }
+  
+  .intro__slider__scrollbar {
+    position: absolute;
+    width: 2px;
+    height: 520px;
+    background-color: #ffffff;
+    top: 140px;
+    right: 50px;
+  }
+
+  

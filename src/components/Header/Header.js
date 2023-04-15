@@ -11,7 +11,7 @@ function Header() {
                 <Logo />
                 <Navigation />
             </div>
-            <Button className={styles.header__backMenu} type="button" ariaLabel="Назад.">
+            <Button className={styles.header__backMenu} type="button"  aria-label="Назад.">
                 {
                     <svg width="22" height="38" viewBox="0 0 22 38" fill="currentColor">
                         <use href="./img/sprite.svg#icon-arrow"></use>

@@ -6,27 +6,27 @@ export default function Navigation() {
 
     const dataLink = [
         {
-            name: 'Главная',
+            context: 'Главная',
             dataName: '#main-container',
             key: uuidv4()
         },
         {
-            name: 'Как это работает',
+            context: 'Как это работает',
             dataName: '#manual-container',
             key: uuidv4()
         },
         {
-            name: 'Цены',
+            context: 'Цены',
             dataName: '#price-container',
             key: uuidv4()
         },
         {
-            name: 'Открыть в браузере',
+            context: 'Открыть в браузере',
             dataName: '#browser-container',
             key: uuidv4()
         },
         {
-            name: 'Тех поддержка',
+            context: 'Тех поддержка',
             dataName: '#feedback-container',
             key: uuidv4()
         },
@@ -34,7 +34,7 @@ export default function Navigation() {
     return (
         <nav className={styles.header__navigation}>
             <ul className={`${styles.header__list} ${styles.navigation}`}>
-                {dataLink.map((item) => <NavigationItem dataName={item.dataName} children={item.name} />)}
+                {dataLink.map((item) => <NavigationItem data-name={item.dataName} children={item.context} key={item.key} />)}
             </ul>
         </nav>
     )
