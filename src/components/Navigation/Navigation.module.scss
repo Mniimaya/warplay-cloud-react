@@ -1,0 +1,32 @@
+@import "../../global-style/variables.scss";
+@import "../../global-style/mixins.scss";
+
+.header__navigation {
+    width: 100%;
+    margin-bottom: 40px;
+  
+    @include viewport--md {
+      margin: 0;
+      width: auto;
+    }
+}
+
+.header__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    @include viewport--lg {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: max-content;
+      justify-content: space-between;
+    }
+  }
+  

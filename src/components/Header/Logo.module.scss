@@ -1,0 +1,40 @@
+@import "../../global-style/variables.scss";
+@import "../../global-style/mixins.scss";
+
+
+.header__logoLink {
+    margin-bottom: 20px;
+    @include trans;
+  
+    &:focus-visible {
+      outline: 2px solid $color-blue;
+      border-radius: 0.2em;
+    }
+  
+    @include viewport--md {
+      color: $color-blue;
+  
+      &:hover {
+        color: $color-gray;
+      }
+    }
+  
+    @include viewport--lg {
+      margin: 0;
+      margin-right: 99px;
+    }
+  }
+  
+  .header__logoMobile {
+    @include viewport--lg {
+      display: none;
+    }
+  }
+  
+  .header__logoDesktop {
+    display: none;
+  
+    @include viewport--lg {
+      display: block;
+    }
+  }

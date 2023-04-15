@@ -1,0 +1,57 @@
+@import "./variables.scss";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+main {
+  overflow: hidden;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-roboto;
+  color: $color-gray;
+  font-weight: 300;
+  font-size: 21.33px;
+  line-height: 32px;
+  background-color: $color-background;
+  margin: 0;
+  padding: 0;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.input-hidden {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

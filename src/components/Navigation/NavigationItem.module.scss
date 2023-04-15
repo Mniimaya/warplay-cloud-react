@@ -1,0 +1,56 @@
+@import "../../global-style/variables.scss";
+@import "../../global-style/mixins.scss";
+
+
+.header__item:not(:last-child) {
+    margin-bottom: 11px;
+  
+    @include viewport--lg {
+      margin-right: 26px;
+      margin-bottom: 0;
+    }
+}
+
+.navigation__link {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: $color-white;
+  padding: 10px 10px;
+  overflow: hidden;
+
+  &:active {
+    color: $color-blue;
+    transition: 0.3ms;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-blue;
+    border-radius: 0.2em;
+  }
+
+  @include link-reset;
+  position: relative;
+
+  @include viewport--md {
+    padding: 14px 10px;
+  }
+
+}
+
+.navigation__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: $color-blue;
+  left: 0;
+  bottom: 0;
+  @include trans;
+}
+
+.navigation__link:hover::after,
+.navigation__link:hover {
+  width: 100%;
+  color: $color-gray;
+}
