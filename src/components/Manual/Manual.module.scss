@@ -1,0 +1,304 @@
+@import "../../global-style/variables.scss";
+@import "../../global-style/mixins.scss";
+
+.manual {
+    padding-top: 75px;
+    padding-bottom: 110px;
+    position: relative;
+  
+    @include viewport--lg {
+      padding-bottom: 150px;
+      padding-top: 150px;
+    }
+  }
+  
+  .manual__cardDescription {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+    justify-items: center;
+    padding-bottom: 118px;
+  
+    @include viewport--md {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(5, min-content);
+      position: relative;
+      padding-bottom: 87px;
+    }
+  }
+  
+  .manual__titleCardDescription {
+    margin-right: -33px;
+    margin-bottom: 17px;
+    justify-self: center;
+  
+    @include viewport--md {
+      grid-column: 2/-1;
+      grid-row: 1/2;
+      justify-self: start;
+      padding-left: 42px;
+      margin-bottom: 23px;
+    }
+  }
+  
+  .manual__subtitleCardDescription {
+    justify-self: start;
+    margin-bottom: 61px;
+  
+    @include viewport--md {
+      grid-column: 2/-1;
+      grid-row: 2/3;
+    }
+  
+  }
+  
+  .manual__descriptionCard {
+    margin: 0;
+    max-width: 310px;
+    margin-bottom: 30px;
+  
+    @include viewport--md {
+      grid-column: 2/-1;
+      max-width: 471px;
+      margin-bottom: 47px;
+      grid-row: 3/4;
+    }
+  }
+  
+  .manual__imgBox {
+    margin-bottom: 30px;
+  
+    @include viewport--md {
+      grid-column: 1/2;
+      grid-row: 2/7;
+    }
+  }
+  
+  .manual__imgCardDescription {
+    @include viewport--md {
+      width: 499px;
+    }
+  
+    @include viewport--lg {
+      width: 664px;
+    }
+  }
+  
+  .manual__descriptionCharacteristic {
+    margin: 0;
+    max-width: 319px;
+    margin-bottom: 81px;
+  
+    @include viewport--md {
+      grid-column: 2/-1;
+      max-width: 471px;
+      grid-row: 4/5;
+      margin-bottom: 71px;
+    }
+  }
+  
+  .manual__downloadModule {
+    font-family: $font-roboto;
+    font-size: 16px;
+    line-height: 18.75px;
+    font-weight: 500;
+    color: $color-blue;
+    text-decoration: none;
+    justify-self: center;
+    padding: 5px 3px;
+    border-bottom: 1px solid $color-blue;
+  
+    @include viewport--md {
+      grid-column: 2/-1;
+      grid-template-rows: 5/6;
+      justify-self: start;
+    }
+  }
+  
+  .manual__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .manual__title {
+    margin-right: -33px;
+    margin-bottom: 16px;
+  }
+  
+  .manual__subtitle {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    margin-bottom: 90px;
+    align-self: start;
+  
+    @include viewport--md {
+      align-self: center;
+    }
+  }
+  
+  .manual__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    column-gap: 65px;
+    row-gap: 53px;
+    list-style: none;
+    font-size: 21px;
+    line-height: 32px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+  
+    @include viewport--md {
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      column-gap: 61px;
+      margin-bottom: 84px;
+    }
+  }
+  
+  .manual__list li:nth-child(odd) {
+    @include viewport--lg {
+      transform: translateY(50%);
+      transition: 1s;
+    }
+  
+  }
+  
+  .manual__list li:nth-child(even) {
+    @include viewport--lg {
+      transform: translateY(-50%);
+      transition: 1s;
+    }
+  }
+  
+  .manual__card--activated .manual__list li:nth-child(odd),
+  .manual__card--activated .manual__list li:nth-child(even) {
+    @include viewport--lg {
+      transform: translateY(0);
+    }
+  
+  }
+  
+  .manual__item {
+    padding-top: 58px;
+    text-align: center;
+    max-width: 130px;
+  
+    @include viewport--md {
+      max-width: 183px;
+      padding-top: 75px;
+    }
+  
+    &Account {
+      background-image: url("../../icons/mail-mob.png");
+      background-size: 51px 50px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      position: relative;
+  
+      &::after {
+        content: "";
+        width: 58px;
+        height: 1px;
+        display: inline-block;
+        background-color: $color-light-blue;
+        position: absolute;
+        right: -58px;
+        top: 24px;
+      }
+  
+      @include viewport--md {
+        background-image: url("../../icons/mail-desk.png");
+        background-size: 64px 64px;
+        &::after {
+          width: 73px;
+        }
+      }
+    }
+  
+    &Download {
+      background-image: url("../../icons/download-mob.png");
+      background-size: 51px 50px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      position: relative;
+  
+      &::before {
+        content: "";
+        width: 162px;
+        height: 1px;
+        background-color: $color-light-blue;
+        position: absolute;
+        transform: rotate(135deg);
+        left: -120px;
+        bottom: 16px;
+      }
+  
+      @include viewport--md {
+        background-image: url("../../icons/download-desk.png");
+        background-size: 64px 64px;
+  
+        &::before {
+          display: none;
+        }
+  
+        &::after {
+          content: "";
+          width: 73px;
+          height: 1px;
+          display: inline-block;
+          background-color: $color-light-blue;
+          position: absolute;
+          right: -58px;
+          top: 24px;
+        }
+      }
+    }
+  
+    &Rate {
+      background-image: url("../../icons/joystick-mob.png");
+      background-size: 56px 56px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      padding-top: 67px;
+  
+      @include viewport--md {
+        background-image: url("../../icons/joystick-desk.png");
+        background-size: 64px 64px;
+        padding-top: 75px;
+      }
+    }
+  
+    &Game {
+      background-image: url("../../icons/arcade-mob.png");
+      background-size: 57px 57px;
+      background-position: top center;
+      background-repeat: no-repeat;
+      padding-top: 66px;
+      position: relative;
+  
+      &::before {
+        content: "";
+        width: 65px;
+        height: 1px;
+        display: inline-block;
+        background-color: #57d6ff;
+        position: absolute;
+        left: -59px;
+        top: 27px;
+      }
+  
+      @include viewport--md {
+        background-image: url("../../icons/arcade-desk.png");
+        background-size: 57px 57px;
+        padding-top: 75px;
+  
+        &::before {
+          width: 65px;
+        }
+      }
+    }
+  }
+  
