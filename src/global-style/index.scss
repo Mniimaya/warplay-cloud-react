@@ -235,6 +235,28 @@ button {
   }
 }
 
+.input-form {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-gray;
+  border-radius: 5px;
+  border: none;
+  font-family: $font-aire;
+  width: 100%;
+  padding-left: 20px;
+  min-height: 75px;
+
+  @include viewport--md {
+  }
+
+  @include viewport--lg {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+
 
 
 

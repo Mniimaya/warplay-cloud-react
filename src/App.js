@@ -1,3 +1,5 @@
+import Advantages from './components/Advantages/Advantages';
+import Feedback from './components/Feedback/Feedback';
 import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
 import Manual from './components/Manual/Manual';
@@ -13,6 +15,8 @@ function App() {
           <Manual />
           <Rate />
         </div>
+        <Advantages/>
+        <Feedback/>
       </main>
     </div>
   );
